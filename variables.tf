@@ -11,7 +11,7 @@ variable "ami_filter" {
     owner = string
   })
 
-  default =  {
+  default = {
     values = "bitnami-tomcat-*-x86_64-hvm-ebs-nami"
     owner  = "979382823631" # Bitnami
   }
@@ -20,7 +20,7 @@ variable "ami_filter" {
 variable "environment" {
   description = "Developement Environment"
   
-  type = objects({
+  type = object({
     name           = string
     network_prefix = string
   })
